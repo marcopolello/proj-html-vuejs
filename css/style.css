@@ -60,18 +60,26 @@ nav{
 }
 .link_list{
   padding: 0;
-  margin: 15px 0;
+  margin: 8px 0;
 }
 .links{
   display: inline-block;
   list-style-type: none;
-  padding: 0 15px;
+  padding: 0 25px;
+  position: relative;
+  cursor: pointer;
 }
-.prova{
+.drop-menu{
+  position: absolute;
+  left: 10px;
+  /* display: none; */
   margin-top: 10px;
-  width: 70px;
-  height: 100px;
+  width: 80px;
+  min-height: 100px;
   background-color: blue;
+}
+.visible{
+  display: block;
 }
 [alt="getintouch"]{
   width: 110px;

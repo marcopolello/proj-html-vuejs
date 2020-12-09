@@ -44,30 +44,57 @@ var app = new Vue({
     linkList: [
       {
         text: 'home',
-        menu: ['link']
+        dropmenu: {
+          visible: false,
+          links: ['link', 'link']
+        }
       },
       {
         text: 'services',
-        menu: ['link']
+        dropmenu: {
+          visible: false,
+          links: ['link', 'ciao', 'link', 'link']
+        }
       },
       {
         text: 'about',
-        menu: ['link']
+        dropmenu: {
+          visible: false,
+          links: ['faiquello', 'link']
+        }
       },
       {
         text: 'projects',
-        menu: ['link']
+        dropmenu: {
+          visible: false,
+          links: ['link', 'cosisifa', 'link']
+        }
       },
       {
         text: 'results',
-        menu: ['link']
+        dropmenu: {
+          visible: false,
+          links: ['link', 'link']
+        }
       },
-    ]
+    ],
+    attivo: 0
   },
   methods:{
+    // ricarica pagina
     home: function () {
       location.reload();
       return false;
     },
+    // alza/abbassa dropmenu
+    dropMenu: function (i) {
+      this.attivo = i;
+      //console.log(this.attivo);
+      if (this.linkList[i].dropmenu.visible == false) {
+        this.linkList[i].dropmenu.visible = true;
+      } else if (this.linkList[i].dropmenu.visible == true) {
+        this.linkList[i].dropmenu.visible = false;
+      }
+    }
   }
 });
