@@ -5,9 +5,10 @@
   text-align: center;
 }
 /* classe x blocchi che mi servono fissi */
-/* .fixed{
+.fixed{
   position: fixed;
-} */
+  z-index: 100;
+}
 
 /* regole di debug */
 [class*="col-"] {
@@ -32,25 +33,52 @@
   padding: 0 15%;
 }
 .ms_container2{
-  padding: 0 20%;
+  padding: 0;
 }
-
-/* sezione nav superiore*/
 nav{
-  background-color: #122439;
-  min-height: 50px;
+  margin-bottom: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-/* sezione transparent della nav */
+/* sezione nav top*/
+#ground{
+  background-color: #122439;
+  color: white;
+}
+/* sezione nav bot */
 #noground{
   background-color: transparent;
 }
-[alt*="logo-nexgen"] {
+[alt="logo-nexgen"] {
+  margin: 10px 0;
   width: 120px;
   height: 40px;
 }
+.link_list{
+  padding: 0;
+  margin: 15px 0;
+}
+.links{
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 5px;
+}
+[alt="getintouch"]{
+  width: 110px;
+  height: auto;
+}
 /* sezione jumbotron */
 #jumbotron{
-  background-color: lightblue;
+  /* margine da modificare */
+  margin-top: 100px;
+  min-height: 500px;
+  background-image: url(../img/bg-parallax1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #customers{
   background-color: #F3F5F9;
