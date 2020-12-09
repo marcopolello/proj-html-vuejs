@@ -6,6 +6,7 @@
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -39,28 +40,23 @@
 
                 <!-- contatti navbar -->
                 <div class="col-xs-6	col-md-5 col-md-offset-2	col-lg-7 col-lg-offset-2">
-                  <!-- contatto telefonico -->
-                  <div class="col-xs-4	col-md-4	col-lg-4">
-                    <!-- icona telefono -->
-                    <a href="#"><i style="font-size:10px;" class="fas fa-phone"></i></a>
-                    <!-- numero di telefono -->
-                    <a href="#"><p style="font-size:10px; display:inline-block;">+1(306)1234-5678</p></a>
+
+                  <!-- contatto telefonico e via mail -->
+                  <div v-for="(contatto, index) in contatti" class="col-xs-4	col-md-4	col-lg-4">
+                    <!-- icona telefono/mail -->
+                    <a :href="contatti[index].url"><i style="font-size:10px;" :class="contatti[index].icona"></i></a>
+                    <!-- numero di telefono/indirizzo mail -->
+                    <a :href="contatti[index].url"><p style="font-size:10px; display:inline-block;">{{contatti[index].indirizzo}}</p></a>
+                    <!-- contatto mail -->
                   </div>
-                  <!-- contatto via mail -->
-                  <div class="col-xs-4	col-md-4	col-lg-4">
-                    <!-- icona mail -->
-                    <a href="#"><i style="font-size:10px;" class="fas fa-envelope"></i></a>
-                    <!-- inidirizzo mail -->
-                    <a href="#"><p style="font-size:10px; display:inline-block;">hello@example.com</p></a>
-                  </div>
-                  <!-- contatto via socialnetwork -->
+
+                  <!-- contatti via socialnetwork -->
                   <div class="col-xs-4	col-md-4	col-lg-4">
                     <!-- icona facebook -->
-                    <a href="#"><i style="font-size:10px;" class="fab fa-facebook-f"></i></a>
+                    <a v-for="(social, index) in contattiSocial" :href="contattiSocial[index].url"><i :style="contattiSocial[index].stile" :class="contattiSocial[index].icona"></i></a>
                     <!-- icona twitter -->
-                    <a href="#"><i style="font-size:10px;" class="fab fa-twitter"></i></a>
                     <!-- icona linkedin -->
-                    <a href="#"><i style="font-size:10px;" class="fab fa-linkedin-in"></i></a>
+
                   </div>
 
                 </div>
