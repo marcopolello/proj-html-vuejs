@@ -35,13 +35,18 @@
   padding: 0 20%;
 }
 
-/* sfondo nav */
+/* sezione nav superiore*/
 nav{
   background-color: #122439;
-  min-height: 100px;
+  min-height: 50px;
 }
+/* sezione transparent della nav */
 #noground{
   background-color: transparent;
+}
+[alt*="logo-nexgen"] {
+  width: 120px;
+  height: 40px;
 }
 /* sezione jumbotron */
 #jumbotron{
