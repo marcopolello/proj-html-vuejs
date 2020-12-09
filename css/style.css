@@ -53,7 +53,7 @@ nav{
 #noground{
   background-color: transparent;
 }
-[alt="logo-nexgen"] {
+#logo{
   margin: 10px 0;
   width: 120px;
   height: 40px;
@@ -74,7 +74,7 @@ nav{
 /* sezione jumbotron */
 #jumbotron{
   /* margine da modificare */
-  margin-top: 100px;
+  margin-top: 120px;
   min-height: 500px;
   background-image: url(../img/bg-parallax1.png);
   background-size: cover;

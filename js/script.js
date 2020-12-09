@@ -36,7 +36,11 @@ var app = new Vue({
         stile: 'font-size:10px; margin: 0px 5px;',
         url: 'https://www.linkedin.com/'
       },
-    ]
+    ],
+    logo: {
+      picture: 'img/logo.png',
+      text: 'logo-nexgen'
+    }
   },
   methods:{
     home: function () {
