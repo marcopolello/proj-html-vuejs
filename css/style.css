@@ -15,6 +15,7 @@
   background-color: lightgreen;
   border: solid 1px black;
   text-align: center;
+  padding: 0;
 }
 /* .row .col-6 div  */
 [class*="col-"] > .row > [class*="col-"]{
