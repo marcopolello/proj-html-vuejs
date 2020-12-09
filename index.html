@@ -31,9 +31,9 @@
 
                   <div class="col-xs-12	col-md-12	col-lg-12">
                     <!-- icona orologio -->
-                    <i style="font-size:10px;" class="fas fa-clock"></i>
+                    <i :style="orario.stile" :class="orario.icona"></i>
                     <!-- orari di lavoro -->
-                    <p style="font-size:10px; display:inline-block;">Open Hours: Mon-Sat 9:00-18:00</p>
+                    <p :style="orario.stile">Open Hours: {{orario.worktime}}</p>
                   </div>
 
                 </div>
@@ -44,16 +44,22 @@
                   <!-- contatto telefonico e via mail -->
                   <div v-for="(contatto, index) in contatti" class="col-xs-4	col-md-4	col-lg-4">
                     <!-- icona telefono/mail -->
-                    <a :href="contatti[index].url"><i style="font-size:10px;" :class="contatti[index].icona"></i></a>
+                    <a :href="contatti[index].url">
+                      <i :style="contatti[index].stile" :class="contatti[index].icona"></i>
+                    </a>
                     <!-- numero di telefono/indirizzo mail -->
-                    <a :href="contatti[index].url"><p style="font-size:10px; display:inline-block;">{{contatti[index].indirizzo}}</p></a>
+                    <a :href="contatti[index].url">
+                      <p  :style="contatti[index].stile">{{contatti[index].indirizzo}}</p>
+                    </a>
                     <!-- contatto mail -->
                   </div>
 
                   <!-- contatti via socialnetwork -->
                   <div class="col-xs-4	col-md-4	col-lg-4">
                     <!-- icona facebook -->
-                    <a v-for="(social, index) in contattiSocial" :href="contattiSocial[index].url"><i :style="contattiSocial[index].stile" :class="contattiSocial[index].icona"></i></a>
+                    <a v-for="(social, index) in contattiSocial" :href="contattiSocial[index].url">
+                      <i :style="contattiSocial[index].stile" :class="contattiSocial[index].icona"></i>
+                    </a>
                     <!-- icona twitter -->
                     <!-- icona linkedin -->
 
