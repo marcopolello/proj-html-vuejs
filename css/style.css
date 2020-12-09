@@ -1,0 +1,85 @@
+/******** sovrascritto framework bootstrap **********/
+.container-fluid{
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+}
+/* classe x blocchi che mi servono fissi */
+/* .fixed{
+  position: fixed;
+} */
+
+/* regole di debug */
+[class*="col-"] {
+  min-height: 100px;
+  background-color: lightgreen;
+  border: solid 1px black;
+  text-align: center;
+}
+/* .row .col-6 div  */
+[class*="col-"] > .row > [class*="col-"]{
+  background-color: salmon;
+  border-color: #fff;
+}
+
+/* regole centratura pagina */
+
+.ms_container{
+  padding: 0 20%;
+}
+.ms_container1{
+  padding: 0 15%;
+}
+.ms_container2{
+  padding: 0 20%;
+}
+
+/* sfondo nav */
+nav{
+  background-color: #122439;
+  min-height: 100px;
+}
+#noground{
+  background-color: transparent;
+}
+/* sezione jumbotron */
+#jumbotron{
+  background-color: lightblue;
+}
+#customers{
+  background-color: #F3F5F9;
+}
+#deploy{
+  background-color: #FFFFFF;
+}
+#designed{
+  background-color: #F3F5F9;
+}
+#features{
+  background-color: #FFFFFF;
+}
+#service{
+  background-color: #0F2656;
+}
+#development{
+  background-color: #F3F5F9;
+}
+#start{
+  background-color: #0061FF;
+}
+#foot{
+  background-color: #2C3E50;
+}
+
+/* REGOLE MEDIA QUERIES PARTICOLARI */
+@media all and (max-width: 768px){
+  .ms_container{
+    padding: 0 5%;
+  }
+  .ms_container1{
+    padding: 0 8%;
+  }
+}
+@media all and (min-width: 769px) and (max-width: 1200px){
+
+}
