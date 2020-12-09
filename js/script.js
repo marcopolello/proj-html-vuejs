@@ -40,7 +40,29 @@ var app = new Vue({
     logo: {
       picture: 'img/logo.png',
       text: 'logo-nexgen'
-    }
+    },
+    linkList: [
+      {
+        text: 'home',
+        menu: ['link']
+      },
+      {
+        text: 'services',
+        menu: ['link']
+      },
+      {
+        text: 'about',
+        menu: ['link']
+      },
+      {
+        text: 'projects',
+        menu: ['link']
+      },
+      {
+        text: 'results',
+        menu: ['link']
+      },
+    ]
   },
   methods:{
     home: function () {
