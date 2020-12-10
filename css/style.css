@@ -4,18 +4,13 @@
   padding-left: 0;
   text-align: center;
 }
-/* classe x blocchi che mi servono fissi */
-.fixed{
-  position: fixed;
-  z-index: 100;
-}
 
 /* regole di debug */
 [class*="col-"] {
-  min-height: 100px;
+  /* min-height: 100px;
   background-color: lightgreen;
   border: solid 1px black;
-  text-align: center;
+  text-align: center; */
   padding: 0;
 }
 /* .row .col-6 div  */
@@ -47,7 +42,7 @@ nav{
 }
 /* sezione nav top*/
 #ground{
-  background-color: #122439;
+  background-color: #111117;
   color: white;
   padding: 10px 0;
 }
@@ -98,43 +93,6 @@ nav{
 #wrap{
   margin-top: 160px;
 }
-/* slider ---> */
-.slider-wrapper {
-  margin: auto;
-  width: 100%;
-  height: 80%;
-}
-/* img dentro lo slider */
-#button1slider{
-  height: auto;
-  width: 110px;
-}
-#button2slider{
-  height: auto;
-  width: 100px;
-}
-.prev{
-  margin-top: 10px;
-}
-.navcar{
-  background-color: lightgrey;
-  padding: 5px;
-  position: absolute;
-  right: 30px;
-  top: 30%;
-}
-.navcar > i{
-  font-size: 30px;
-  display: block;
-  margin: 5px 0;
-}
-.navcar > i.active {
-  color: blue;
-}
-/* <-- FINE SLIDER */
-
-
-
 /* sezione excellence in service */
 #excellence{
   padding: 100px 0;
@@ -150,27 +108,74 @@ nav{
   max-width: 100%;
   height: auto;
 }
-
+#background_companysx{
+  background-color: #191928;
+  height: 678px;
+}
 /* sezione actions & projects */
 #actions{
   background-color: #F3F5F9;
   padding: 100px 0;
 }
 
-
+/* penultima sezione main */
 #results{
-  min-height: 500px;
+  min-height: 600px;
   background-image: url(../img/bg-7.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
+  position: relative;
 }
-#getintouch{
-  background-color: #0F2656;
+.background_block{
+  position: absolute;
+  height: 160px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #191928;
+  z-index: 2;
 }
 
-#foot{
-  background-color: #2C3E50;
+
+
+/* ultima sezione main */
+#getintouch{
+  background-color: white;
+  min-height: 600px;
+  padding-top: 100px;
+}
+
+#foot_top{
+  background-color: #191928;
+  padding: 100px 0;
+}
+#logoFoot{
+  max-width: 100px;
+  height: auto;
+  margin-right: 50px;
+}
+#foot_bot{
+  background-color: #111117;
+}
+.colonna_Foot{
+  margin: 0 20px;
+  padding: 5px;
+  background-color: #1e1e38;
+  border-radius: 5px;
+}
+.colonna_Foot a{
+  color: white;
+  text-decoration: none;
+}
+.colonna_Foot h4{
+  text-align: left;
+  padding-left: 20px;
+}
+.colonna_Foot span{
+  display: block;
+  text-align: left;
+  padding-left: 30px;
 }
 
 /* REGOLE MEDIA QUERIES PARTICOLARI */

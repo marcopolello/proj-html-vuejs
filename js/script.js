@@ -4,7 +4,7 @@ var app = new Vue({
     orario:{
       stile: 'font-size:10px; display:inline-block;',
       worktime: 'Mon-Sat 9:00-18:00',
-      icona: 'fas fa-clock'
+      iconaTimes: 'fas fa-clock'
     },
     contatti: [
       {

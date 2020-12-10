@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -31,7 +32,7 @@
 
                   <div class="col-xs-12	col-md-12	col-lg-12">
                     <!-- icona orologio -->
-                    <i :style="orario.stile" :class="orario.icona"></i>
+                    <i :style="orario.stile" :class="orario.iconaTimes"></i>
                     <!-- orari di lavoro -->
                     <p :style="orario.stile">Open Hours: {{orario.worktime}}</p>
                   </div>
@@ -211,7 +212,7 @@
             <!-- sezione con un'unica riga divisa in 2 -->
             <div class="row">
 
-              <div class="col-xs-12 col-md-12 col-lg-6">
+              <div id="background_companysx" class="col-xs-12 col-md-12 col-lg-6">
 
               </div>
 
@@ -317,30 +318,63 @@
             </div>
 
           </div>
+          <!-- blocco position absoluto che copre parte inferiore delle sezione -->
+          <div class="background_block">
 
+            <div class="ms_container1">
+
+              <div class="row">
+
+                <div class="col-xs-8 col-md-4 col-lg-2">
+
+                </div>
+                <div class="col-xs-8 col-md-4 col-lg-2">
+
+                </div>
+                <div class="col-xs-8 col-md-4 col-lg-2">
+
+                </div>
+                <div class="col-xs-8 col-md-4 col-lg-2">
+
+                </div>
+                <div class="col-xs-8 col-md-4 col-lg-2">
+
+                </div>
+                <div class="col-xs-8 col-md-4 col-lg-2">
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
         </section>
 
-        <!-- sezione tabellare -->
+        <!-- sezione form -->
         <section id="getintouch">
 
           <div class="ms_container">
             <!-- riga subtitolo -->
             <div class="row">
 
-              <div class="col-xs-12	col-md-12	col-lg-12">
+              <div class="col-xs-12	col-md-6	col-lg-6">
+
+              </div>
+              <div class="col-xs-12	col-md-6	col-lg-6">
 
               </div>
 
             </div>
 
-            <!-- riga suddivisa in 3 con spiegazioni caratteristiche -->
+            <!-- riga con form sx e contatti a dx -->
             <div class="row">
 
-              <div class="col-xs-12 col-md-12 col-lg-6">
+              <div class="col-xs-12 col-md-6 col-lg-6">
 
               </div>
 
-              <div class="col-xs-12 col-md-12 col-lg-6">
+              <div class="col-xs-12 col-md-6 col-lg-6">
 
               </div>
 
@@ -353,41 +387,58 @@
       </main>
 
       <!-- footer -->
-      <footer>
+      <footer id="root">
 
         <!-- sezione foot -->
-        <section id="foot">
+        <section id="foot_top">
 
           <div class="ms_container">
 
-            <!-- riga con innesto nel footer -->
             <div class="row">
+              <!-- logo del footer/contatti/bottone -->
+              <div class="col-xs-12	col-md-6 col-lg-3">
 
-              <!-- colonna Copyright -->
-              <div class="col-xs-12	col-md-12 col-lg-4">
+                <div>
+                  <a href="file:///C:/Users/marco/Documents/Boolean/Esercizi/proj-html-vuejs/index.html#"><img id="logoFoot" :src="logoFoot.picture" alt="logoFoot.text"></a>
+                </div>
+
+                <p :style="footContact.style">{{footContact.text}}</p>
+
+                <a :href="footContact.contact_tel.url">
+                  <p :style="footContact.style">
+                    <i :class="footContact.contact_tel.icona"></i>
+                    {{footContact.contact_tel.indirizzo}}
+                  </p>
+                </a>
+
+                <a :href="footContact.contact_mail.url">
+                  <p :style="footContact.style">
+                    <i :class="footContact.contact_mail.icona"></i>
+                    {{footContact.contact_mail.indirizzo}}
+                  </p>
+                </a>
+
+                <a :href="footContact.position.url">
+                  <p :style="footContact.style">
+                    <i :class="footContact.position.icona"></i>
+                    {{footContact.position.indirizzo}}
+                  </p>
+                </a>
+
+                <a href="#">
+                  <img :style="bottoneFoot.stile" :src="bottoneFoot.picture" alt="">
+                </a>
 
               </div>
 
-              <!-- l'innesto inizia qui e si divide in 4 colonne -->
-              <div class="col-xs-12	col-md-12 col-lg-8">
+              <!-- 1a lista -->
+              <div v-for="(colonna,i) in listeFoot" class="col-xs-12	col-md-6 col-lg-3">
 
-                <div class="row">
-
-                  <div class="col-xs-12	col-md-6 col-lg-3">
-
-                  </div>
-
-                  <div class="col-xs-12	col-md-6 col-lg-3">
-
-                  </div>
-
-                  <div class="col-xs-12	col-md-6 col-lg-3">
-
-                  </div>
-
-                  <div class="col-xs-12	col-md-6 col-lg-3">
-
-                  </div>
+                <div class="colonna_Foot">
+                  <!-- titolo colonna links -->
+                  <a href="#"><h4>{{listeFoot[i].title}}</h4></a>
+                  <!-- lista links -->
+                  <a href="#"><span v-for="(link, index) in listeFoot[0].links"><i style="margin-right: 10px;" class="fas fa-angle-right"></i>{{listeFoot[i].links[index]}}</span></a>
 
                 </div>
 
@@ -399,6 +450,32 @@
 
         </section>
 
+        <!-- footer più basso che chiude la webpage -->
+        <section id="foot_bot">
+
+          <div class="ms_container">
+
+            <div class="row">
+
+              <!-- foot_bot sx -->
+              <div class="col-xs-6	col-md-5	col-lg-5">
+                <p :style="foot_bot[0].style">{{foot_bot[0].text}}</p>
+              </div>
+
+              <!-- foot_bot dx -->
+              <div class="col-xs-6	col-md-5 col-md-offset-2	col-lg-4 col-lg-offset-3">
+                <p :style="foot_bot[1].style">{{foot_bot[1].text}}
+                  <a :href="foot_bot[1].link.href">{{foot_bot[1].link.text}}</a>
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <script src="js/footer.js" charset="utf-8"></script>
       </footer>
 
     </div>
