@@ -80,6 +80,7 @@ nav{
 .visible{
   display: block;
 }
+/* bottone header inferiore */
 [alt="getintouch"]{
   width: 110px;
   height: auto;
@@ -97,7 +98,7 @@ nav{
 #wrap{
   margin-top: 160px;
 }
-/* slider */
+/* slider ---> */
 .slider-wrapper {
   margin: auto;
   width: 100%;
@@ -130,34 +131,44 @@ nav{
 .navcar > i.active {
   color: blue;
 }
+/* <-- FINE SLIDER */
 
 
 
-
-
+/* sezione excellence in service */
 #excellence{
-  padding-top: 100px;
+  padding: 100px 0;
   background-color: #F3F5F9;
-  min-height: 1000px;
+  min-height: 100px;
 }
-#deploy{
-  background-color: #FFFFFF;
+
+/* sezione thecompany/sfondo uomo in affari */
+#thecompany{
+  min-height: 500px;
 }
-#designed{
+#thecompany img{
+  max-width: 100%;
+  height: auto;
+}
+
+/* sezione actions & projects */
+#actions{
   background-color: #F3F5F9;
+  padding: 100px 0;
 }
-#features{
-  background-color: #FFFFFF;
+
+
+#results{
+  min-height: 500px;
+  background-image: url(../img/bg-7.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#service{
+#getintouch{
   background-color: #0F2656;
 }
-#development{
-  background-color: #F3F5F9;
-}
-#start{
-  background-color: #0061FF;
-}
+
 #foot{
   background-color: #2C3E50;
 }
