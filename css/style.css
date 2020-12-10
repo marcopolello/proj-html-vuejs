@@ -12,9 +12,9 @@
 
 /* regole di debug */
 [class*="col-"] {
-  /* min-height: 100px;
+  min-height: 100px;
   background-color: lightgreen;
-  border: solid 1px black; */
+  border: solid 1px black;
   text-align: center;
   padding: 0;
 }
@@ -71,12 +71,9 @@ nav{
 }
 .drop-menu{
   position: absolute;
-  left: 10px;
-  /* display: none; */
+  left: 6px;
   margin-top: 10px;
   width: 80px;
-  min-height: 100px;
-  background-color: blue;
 }
 .visible{
   display: block;
@@ -94,6 +91,12 @@ nav{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+#wrap{
+  margin-top: 160px;
+}
+.nav > i.active {
+  color: blue;
 }
 #customers{
   background-color: #F3F5F9;

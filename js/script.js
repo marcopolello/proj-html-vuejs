@@ -78,7 +78,26 @@ var app = new Vue({
         }
       },
     ],
-    attivo: 0
+    bottoneHead: 'img/hover-button1.png',
+    attivo: 0,
+    activeClass: 'active',
+    arrayblocchi: [
+      {
+        title: 'Ready Team',
+        subtitle: 'no matter what your companies need, we will be ready to assistant you in the best way possible',
+        buttons: ['button1', 'button2']
+      },
+      {
+        title: 'Friendly Team',
+        subtitle: 'no matter what your companies need, we will be ready to assistant you in the best way possible',
+        buttons: ['button1', 'button2']
+      },
+      {
+        title: 'International Team',
+        subtitle: 'from all world',
+        buttons: ['button1', 'button2']
+      }
+    ]
   },
   methods:{
     // ricarica pagina
@@ -87,13 +106,30 @@ var app = new Vue({
       return false;
     },
     // alza/abbassa dropmenu
-    dropMenu: function (i) {
-      this.attivo = i;
-      //console.log(this.attivo);
-      if (this.linkList[i].dropmenu.visible == false) {
-        this.linkList[i].dropmenu.visible = true;
-      } else if (this.linkList[i].dropmenu.visible == true) {
-        this.linkList[i].dropmenu.visible = false;
+    dropMenu: function (item, i, lista) {
+      for (var i = 0; i < lista.length; i++) {
+        lista[i].dropmenu.visible = false;
+      }
+      if (item.dropmenu.visible == true) {
+        item.dropmenu.visible = false;
+      } else if (item.dropmenu.visible == false) {
+        item.dropmenu.visible = true;
+      }
+    },
+    nextPic: function () {
+      if (this.attivo >= (this.arrayblocchi.length - 1)) {
+        this.attivo = 0;
+      } else {
+        this.attivo ++;
+        // console.log(this.attivo);
+      }
+    },
+    prevPic: function () {
+      if (this.attivo === 0) {
+        this.attivo = this.arrayblocchi.length - 1;
+      } else {
+        this.attivo --;
+        // console.log(this.counter);
       }
     }
   }
