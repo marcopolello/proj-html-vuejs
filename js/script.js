@@ -79,23 +79,23 @@ var app = new Vue({
       },
     ],
     bottoneHead: 'img/hover-button1.png',
-    attivo: 0,
+    currentIndex: 0,
     activeClass: 'active',
     arrayblocchi: [
       {
         title: 'Ready Team',
         subtitle: 'no matter what your companies need, we will be ready to assistant you in the best way possible',
-        buttons: ['button1', 'button2']
+        buttons: ['img/hover-button1.png', 'img/hover-button2.png']
       },
       {
         title: 'Friendly Team',
         subtitle: 'no matter what your companies need, we will be ready to assistant you in the best way possible',
-        buttons: ['button1', 'button2']
+        buttons: ['img/hover-button1.png', 'img/hover-button2.png']
       },
       {
         title: 'International Team',
         subtitle: 'from all world',
-        buttons: ['button1', 'button2']
+        buttons: ['img/hover-button1.png', 'img/hover-button2.png']
       }
     ]
   },
@@ -117,18 +117,18 @@ var app = new Vue({
       }
     },
     nextPic: function () {
-      if (this.attivo >= (this.arrayblocchi.length - 1)) {
-        this.attivo = 0;
+      if (this.currentIndex >= (this.arrayblocchi.length - 1)) {
+        this.currentIndex = 0;
       } else {
-        this.attivo ++;
-        // console.log(this.attivo);
+        this.currentIndex ++;
+        // console.log(this.currentIndex);
       }
     },
     prevPic: function () {
-      if (this.attivo === 0) {
-        this.attivo = this.arrayblocchi.length - 1;
+      if (this.currentIndex === 0) {
+        this.currentIndex = this.arrayblocchi.length - 1;
       } else {
-        this.attivo --;
+        this.currentIndex --;
         // console.log(this.counter);
       }
     }

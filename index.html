@@ -116,24 +116,32 @@
               class="col-xs-offset-4	col-xs-4 col-lg-offset-4	col-lg-3">
 
               <div class="slider-wrapper">
-                  <div class="prev" @click="prevPic">
-                      <i class="fas fa-angle-left"></i>
-                  </div>
-                  <div class="blocchi">
-                    {{arrayblocchi[0].title}} <br>
-                    {{arrayblocchi[0].subtitle}} <br>
-                    {{arrayblocchi[0].buttons[0]}} {{arrayblocchi[0].buttons[1]}}
-                  </div>
-                  <div class="next" @click="nextPic">
-                      <i class="fas fa-angle-right"></i>
-                  </div>
-                  <div class="nav">
-                    <i v-for="(item, i) in arrayblocchi" @click="attivo = i" :class="(attivo === i) ? activeClass : '' " class="fas fa-circle" v-on:keydown=""></i>
-                  </div>
-              </div>
+                <div class="next" @click="prevPic">
+                    <i class="fas fa-angle-up"></i>
+                </div>
+                <div class="blocchi">
+
+                <div v-for="(blocco, index) in arrayblocchi" :class="" v-if="index === currentIndex">
+                  <h1>{{arrayblocchi[index].title}}</h1> <br>
+                  <p>{{arrayblocchi[index].subtitle}}</p> <br>
+                  <a href="#"><img id="button1slider" :src="arrayblocchi[index].buttons[0]" alt=""></a>
+                  <a href="#"><img id="button2slider" :src="arrayblocchi[index].buttons[1]" alt=""></a>
+                </div>
+
+                </div>
+                <div class="prev" @click="nextPic">
+                  <i class="fas fa-angle-down"></i>
+                </div>
 
               </div>
 
+              </div>
+
+            </div>
+
+            <div class="navcar">
+              <i v-for="(item, i) in arrayblocchi" @click="currentIndex = i" :class="(currentIndex === i) ? activeClass : '' " class="fas fa-grip-lines-vertical" v-on:keydown="">
+              </i>
             </div>
 
           </div>
