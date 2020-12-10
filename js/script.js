@@ -99,6 +99,9 @@ var app = new Vue({
       }
     ]
   },
+  created: function() {
+    this.startSlide();
+  },
   methods:{
     // ricarica pagina
     home: function () {
@@ -107,9 +110,9 @@ var app = new Vue({
     },
     // alza/abbassa dropmenu
     dropMenu: function (item, i, lista) {
-      for (var i = 0; i < lista.length; i++) {
-        lista[i].dropmenu.visible = false;
-      }
+      // for (var i = 0; i < lista.length; i++) {
+      //   lista[i].dropmenu.visible = false;
+      // }
       if (item.dropmenu.visible == true) {
         item.dropmenu.visible = false;
       } else if (item.dropmenu.visible == false) {
@@ -131,6 +134,10 @@ var app = new Vue({
         this.currentIndex --;
         // console.log(this.counter);
       }
-    }
+    },
+    // funzione per far avanzare slide in automatico
+    startSlide: function() {
+      this.timer = setInterval(this.nextPic, 4000);
+    },
   }
 });
