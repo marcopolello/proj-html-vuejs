@@ -7,10 +7,10 @@
 
 /* regole di debug */
 [class*="col-"] {
-  /* min-height: 100px;
+  min-height: 100px;
   background-color: lightgreen;
   border: solid 1px black;
-  text-align: center; */
+  text-align: center;
   padding: 0;
 }
 /* .row .col-6 div  */
@@ -110,7 +110,7 @@ nav{
 }
 #background_companysx{
   background-color: #191928;
-  height: 678px;
+  height: 690px;
 }
 /* sezione actions & projects */
 #actions{
