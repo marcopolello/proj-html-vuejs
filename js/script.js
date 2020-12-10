@@ -79,10 +79,10 @@ var app = new Vue({
       },
     ],
     bottoneHead: 'img/hover-button1.png',
-    currentIndex: 0,
-    activeClass: 'active',
-    arrayblocchi: [
-      {
+    currentIndex: 0, //contatore slider
+    activeClass: 'active', // icona attiva corrispondente al blocco visibile
+    arrayblocchi: [ //blocchi carousel
+      { //ogni obj è un blocco del carousel
         title: 'Ready Team',
         subtitle: 'no matter what your companies need, we will be ready to assistant you in the best way possible',
         buttons: ['img/hover-button1.png', 'img/hover-button2.png']
@@ -99,7 +99,7 @@ var app = new Vue({
       }
     ]
   },
-  created: function() {
+  created: function() { //funzione slide automatica
     this.startSlide();
   },
   methods:{
@@ -119,6 +119,7 @@ var app = new Vue({
         item.dropmenu.visible = true;
       }
     },
+    // prossima slide
     nextPic: function () {
       if (this.currentIndex >= (this.arrayblocchi.length - 1)) {
         this.currentIndex = 0;
@@ -127,6 +128,7 @@ var app = new Vue({
         // console.log(this.currentIndex);
       }
     },
+    // precedente slide
     prevPic: function () {
       if (this.currentIndex === 0) {
         this.currentIndex = this.arrayblocchi.length - 1;
@@ -135,7 +137,7 @@ var app = new Vue({
         // console.log(this.counter);
       }
     },
-    // funzione per far avanzare slide in automatico
+    // funzione/timer per far avanzare slide in automatico
     startSlide: function() {
       this.timer = setInterval(this.nextPic, 4000);
     },

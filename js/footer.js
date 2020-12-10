@@ -1,3 +1,4 @@
+// dati del footer
 var root = new Vue({
   el: '#root',
   data: {
@@ -57,7 +58,4 @@ var root = new Vue({
       }
     ]
   },
-  methods: {
-
-  }
 });

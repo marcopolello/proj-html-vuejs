@@ -20,7 +20,6 @@
 }
 
 /* regole centratura pagina */
-
 .ms_container{
   padding: 0 20%;
 }
@@ -93,6 +92,7 @@ nav{
 #wrap{
   margin-top: 160px;
 }
+
 /* sezione excellence in service */
 #excellence{
   padding: 100px 0;
@@ -112,13 +112,14 @@ nav{
   background-color: #191928;
   height: 690px;
 }
+
 /* sezione actions & projects */
 #actions{
   background-color: #F3F5F9;
   padding: 100px 0;
 }
 
-/* penultima sezione main */
+/* penultima sezione main (sfondo scacchi) */
 #results{
   min-height: 600px;
   background-image: url(../img/bg-7.jpg);
@@ -127,6 +128,7 @@ nav{
   background-position: bottom;
   position: relative;
 }
+/* blocco con loghi aziendali */
 .background_block{
   position: absolute;
   height: 160px;
@@ -137,8 +139,6 @@ nav{
   z-index: 2;
 }
 
-
-
 /* ultima sezione main */
 #getintouch{
   background-color: white;
@@ -146,6 +146,7 @@ nav{
   padding-top: 100px;
 }
 
+/* footer */
 #foot_top{
   background-color: #191928;
   padding: 100px 0;
