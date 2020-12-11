@@ -190,8 +190,31 @@ nav{
 #actions{
   background-color: #F3F5F9;
   padding: 100px 0;
+  text-align: center;
 }
-
+.sel-progetto{
+  display: inline-block;
+  margin: 30px 20px;
+}
+.progetto{
+  position: relative;
+}
+.progetto img{
+  max-width: 100%;
+  height: auto;
+  padding: 15px;
+  opacity: 2.0;
+  filter: brightness(50%);
+}
+.progetto p{
+  position: absolute;
+  bottom: 50px;
+  z-index: 5;
+  padding: 0 40px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
 /* penultima sezione main (sfondo scacchi) */
 #results{
   min-height: 600px;
