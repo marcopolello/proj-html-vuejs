@@ -337,9 +337,13 @@
 
               <div class="col-xs-12	col-md-12	col-lg-12">
 
-                <div v-on:click.native="selezioneItem(index)" :class="checkIfActive(index)" v-for="(item, index) in progetti" class="sel-progetto" :key="item.id">
+                <div class="navbar-progetti">
 
-                  <h4>{{progetti[index].title}}</h4>
+                  <div :key="item.id" @click="selezioneItem(index)" :class="checkIfActive(index)" v-for="(item, index) in progetti" class="sel-progetto">
+
+                    <h4>{{progetti[index].title}}</h4>
+
+                  </div>
 
                 </div>
 
@@ -347,6 +351,7 @@
 
             </div>
 
+            <!-- riga con le img dei progetti/eventi -->
             <div class="contenitore-progetti">
 
 
