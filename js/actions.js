@@ -209,10 +209,16 @@ var actions = new Vue({
 
     ]
   },
-  created: {
-
-  },
-  methods:{
-
+  methods: {
+    selezioneItem: function (index) {
+      console.log(this.attivo);
+      // rendo item preso al click attivo
+      this.attivo = index;
+    },
+    checkIfActive: function (indice) {
+      if (indice == this.attivo){
+        return "selected"
+      }
+    },
   }
 });

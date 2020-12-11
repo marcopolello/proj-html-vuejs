@@ -337,8 +337,10 @@
 
               <div class="col-xs-12	col-md-12	col-lg-12">
 
-                <div v-for="(progetto, index) in progetti" class="sel-progetto">
-                  <h4>{{progetto.title}}</h4>
+                <div v-on:click.native="selezioneItem(index)" :class="checkIfActive(index)" v-for="(item, index) in progetti" class="sel-progetto" :key="item.id">
+
+                  <h4>{{progetti[index].title}}</h4>
+
                 </div>
 
               </div>
@@ -352,7 +354,7 @@
               <div class="row">
 
                 <div v-for="(subproj, i) in progetti[attivo].subprogetti" class="progetto col-xs-4	col-md-4 col-lg-4">
-                  <img style="border-radius:10px;" :src="subproj.img" alt="">
+                  <img :src="subproj.img" alt="">
                   <p>{{subproj.p}}</p>
                 </div>
 
@@ -362,7 +364,6 @@
 
           </div>
 
-          <script src="js/actions.js" charset="utf-8"></script>
         </section>
 
         <!-- features business -->
@@ -562,6 +563,7 @@
 
     </div>
 
+    <script src="js/actions.js" charset="utf-8"></script>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

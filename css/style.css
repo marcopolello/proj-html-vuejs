@@ -215,6 +215,11 @@ nav{
   font-size: 15px;
   font-weight: bold;
 }
+/* classe utile x js */
+.selected{
+  background-color: lightgrey;
+  padding: 5px;
+}
 /* penultima sezione main (sfondo scacchi) */
 #results{
   min-height: 600px;
