@@ -1,11 +1,11 @@
 var app = new Vue({
   el: '#app',
-  data: {
+  data: { //dati header
     orario:{
       stile: 'font-size:10px; display:inline-block;',
       worktime: 'Mon-Sat 9:00-18:00',
       iconaTimes: 'fas fa-clock'
-    },
+    }, //dati orario di lavoro
     contatti: [
       {
         icona: 'fas fa-phone',
@@ -19,7 +19,7 @@ var app = new Vue({
         indirizzo: 'hello@example.com',
         url: 'https://contacts.google.com/?hl=IT'
       },
-    ],
+    ], //dati mail/telefono
     contattiSocial: [
       {
         icona: 'fab fa-facebook-f',
@@ -36,11 +36,11 @@ var app = new Vue({
         stile: 'font-size:10px; margin: 0px 5px;',
         url: 'https://www.linkedin.com/'
       },
-    ],
+    ], //profili social
     logo: {
       picture: 'img/logo.png',
       text: 'logo-nexgen'
-    },
+    }, //logo home header
     linkList: [
       {
         text: 'home',
@@ -77,7 +77,7 @@ var app = new Vue({
           links: ['link', 'link']
         }
       },
-    ],
+    ], //link menu dropdown
     bottoneHead: 'img/hover-button1.png',
     currentIndex: 0, //contatore slider
     activeClass: 'active', // icona attiva corrispondente al blocco visibile
@@ -94,7 +94,7 @@ var app = new Vue({
       },
       {
         title: 'International Team',
-        subtitle: 'from all world',
+        subtitle: 'from all world, Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
         buttons: ['img/hover-button1.png', 'img/hover-button2.png']
       }
     ]
@@ -139,7 +139,7 @@ var app = new Vue({
     },
     // funzione/timer per far avanzare slide in automatico
     startSlide: function() {
-      this.timer = setInterval(this.nextPic, 4000);
+      this.timer = setInterval(this.nextPic, 5000);
     },
   }
 });

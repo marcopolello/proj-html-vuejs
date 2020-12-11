@@ -1,11 +1,10 @@
-// dati del footer
 var root = new Vue({
   el: '#root',
-  data: {
+  data: { // dati del footer
     logoFoot: {
       picture: 'img/logo.png',
       text: 'logo-nexgen',
-    },
+    }, //logo footer
     footContact: {
       style: 'text-align: left; font-size: 10px; color: white; padding: 0 30px; margin: 5px 0;',
       text: 'a Functional HTML template for Corporate & Business',
@@ -27,7 +26,7 @@ var root = new Vue({
         indirizzo: 'Main Avenue, 857',
         url: 'https://contacts.google.com/?hl=IT'
       },
-    },
+    }, //contatti/posizione footer
     bottoneFoot: {
       picture: 'img/hover-button1.png',
       stile: 'max-width:100px; height:auto; margin:10px 50px 10px 0;'
@@ -45,7 +44,7 @@ var root = new Vue({
         title: 'Support',
         links: ['Privacy','TermOfUse','about','information','Cookies','Accessibility',]
       }
-    ],
+    ], //vari link del footer
     foot_bot: [
       {
         text: 'Enjoy the low price. We are tracking any intention of piracy',
@@ -56,6 +55,6 @@ var root = new Vue({
         style: 'font-size: 12px; padding: 10px 0; color: white;',
         link: {text: 'Codings', href: 'https://stackoverflow.com/'}
       }
-    ]
+    ] //footer(copyright)
   },
 });
