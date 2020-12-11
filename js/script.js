@@ -46,35 +46,35 @@ var app = new Vue({
         text: 'home',
         dropmenu: {
           visible: false,
-          links: ['link', 'link']
+          links: ['link1', 'link2']
         }
       },
       {
         text: 'services',
         dropmenu: {
           visible: false,
-          links: ['link', 'ciao', 'link', 'link']
+          links: ['link1', 'link2', 'link3', 'link4']
         }
       },
       {
         text: 'about',
         dropmenu: {
           visible: false,
-          links: ['faiquello', 'link']
+          links: ['link1', 'link2']
         }
       },
       {
         text: 'projects',
         dropmenu: {
           visible: false,
-          links: ['link', 'cosisifa', 'link']
+          links: ['link1', 'link2', 'link3']
         }
       },
       {
         text: 'results',
         dropmenu: {
           visible: false,
-          links: ['link', 'link']
+          links: ['link1', 'link2']
         }
       },
     ], //link menu dropdown

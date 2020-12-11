@@ -2,7 +2,7 @@
 .container-fluid{
   padding-right: 0;
   padding-left: 0;
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* regole di debug */
@@ -10,7 +10,7 @@
   min-height: 100px;
   background-color: lightgreen;
   border: solid 1px black;
-  text-align: center;
+  /* text-align: center; */
   padding: 0;
 }
 /* .row .col-6 div  */
@@ -30,6 +30,11 @@
   min-height: 500px;
   position: relative;
   padding: 0;
+}
+
+/* header */
+header{
+  text-align: center;
 }
 nav{
   margin-bottom: 0;
@@ -89,10 +94,13 @@ nav{
   background-repeat: no-repeat;
   background-position: center;
 }
-/* margini slider */
+/* margine slider */
 #wrap{
   margin-top: 120px;
-  margin-left:
+}
+/* padding p dei caroselli */
+#wrap p{
+  padding: 0 20px;
 }
 
 /* sezione excellence in service */
@@ -101,10 +109,43 @@ nav{
   background-color: #F3F5F9;
   min-height: 100px;
 }
+/* classe clearfix x elementi flottati personalmente */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.clearfix p{
+  float: left;
+  width: 80%;
+}
+.clearfix img{
+  width: 100px;
+  height: auto;
+  float: right;
+}
+.service_square{
+  padding: 5px;
+  text-align: center;
+}
+.service_square img{
+  max-width: 95%;
+  height: auto;
+}
 
 /* sezione thecompany/sfondo uomo in affari */
 #thecompany{
   min-height: 500px;
+}
+/* img pallini */
+.bullets{
+  z-index: 2;
+  width: 100px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: -28px;
 }
 #thecompany img{
   max-width: 100%;
@@ -149,6 +190,9 @@ nav{
 }
 
 /* footer */
+footer{
+  text-align: center;
+}
 #foot_top{
   background-color: #191928;
   padding: 100px 0;
