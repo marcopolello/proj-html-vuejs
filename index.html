@@ -339,9 +339,9 @@
 
                 <div class="navbar-progetti">
 
-                  <div :key="item.id" @click="selezioneItem(index)" :class="checkIfActive(index)" v-for="(item, index) in progetti" class="sel-progetto">
+                  <div :key="item.id" @click="selezioneItem(index)" v-for="(item, index) in progetti" class="sel-progetto">
 
-                    <h4>{{progetti[index].title}}</h4>
+                    <h4 :class="checkIfActive(index)">{{progetti[index].title}}</h4>
 
                   </div>
 
@@ -379,7 +379,8 @@
             <div class="row">
 
               <div class="col-xs-6 col-md-offset-3	col-md-6	col-lg-6">
-
+                <h6>What are we doing</h6>
+                <h2>Results in Numbers</h2>
               </div>
 
             </div>
@@ -389,17 +390,29 @@
 
               <div class="col-xs-12 col-md-6 col-lg-3">
 
-              </div>
-
-              <div class="col-xs-12 col-md-6 col-lg-3">
-
-              </div>
-
-              <div class="col-xs-12 col-md-6 col-lg-3">
+                <h3>128</h3>
+                <h5>Certifications</h5>
 
               </div>
 
               <div class="col-xs-12 col-md-6 col-lg-3">
+
+                <h3>230</h3>
+                <h5>Employees</h5>
+
+              </div>
+
+              <div class="col-xs-12 col-md-6 col-lg-3">
+
+                <h3>517</h3>
+                <h5>Customers</h5>
+
+              </div>
+
+              <div class="col-xs-12 col-md-6 col-lg-3">
+
+                <h3>94</h3>
+                <h5>Countries Served</h5>
 
               </div>
 
@@ -415,20 +428,32 @@
 
                 <div class="col-xs-8 col-md-4 col-lg-2">
 
-                </div>
-                <div class="col-xs-8 col-md-4 col-lg-2">
+                  <img src="img/logo-4.png" alt="">
 
                 </div>
                 <div class="col-xs-8 col-md-4 col-lg-2">
 
-                </div>
-                <div class="col-xs-8 col-md-4 col-lg-2">
+                  <img src="img/logo-1.png" alt="">
 
                 </div>
                 <div class="col-xs-8 col-md-4 col-lg-2">
 
+                  <img src="img/logo-2.png" alt="">
+
                 </div>
                 <div class="col-xs-8 col-md-4 col-lg-2">
+
+                  <img src="img/logo-3.png" alt="">
+
+                </div>
+                <div class="col-xs-8 col-md-4 col-lg-2">
+
+                  <img id="big-img" src="img/logo-5.png" alt="">
+
+                </div>
+                <div class="col-xs-8 col-md-4 col-lg-2">
+
+                  <img src="img/logo-4.png" alt="">
 
                 </div>
 
@@ -448,8 +473,20 @@
 
               <div class="col-xs-12	col-md-6	col-lg-6">
 
+                <h6>Send a Message</h6>
+                <h2>Get in Touch</h2>
+                <p>we will responde to your message as soon as possible</p>
+
               </div>
               <div class="col-xs-12	col-md-6	col-lg-6">
+
+                <div class="example">
+
+                  <h4>Example Inc.</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p>sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                </div>
 
               </div>
 
@@ -460,9 +497,42 @@
 
               <div class="col-xs-12 col-md-6 col-lg-6">
 
+                <form class="" action="index.html" method="post">
+
+                  <input placeholder="name" type="text" name="" value="">
+                  <input placeholder="Email" type="text" name="" value="">
+                  <input placeholder="phone" type="text" name="" value="">
+                  <input placeholder="moreinfo" type="text" name="" value="">
+                  <textarea placeholder="message" name="name" rows="5" cols="50"></textarea>
+                  <button type="button" name="button">Send</button>
+
+                </form>
+
               </div>
 
               <div class="col-xs-12 col-md-6 col-lg-6">
+
+                <div class="example">
+
+                  <div class="contatti-form">
+                    <i class="fas fa-phone"></i>
+                    <a href="#"><p>+1(306)1234-5678</p></a>
+                  </div>
+                  <div class="contatti-form">
+                    <i class="fas fa-envelope"></i>
+                    <a href="#"><p>hello@example.com</p></a>
+
+                  </div>
+                  <div class="contatti-form">
+
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a href="#"><p>Main Avenue, 857</p></a>
+
+                  </div>
+
+                  <button id="viewmap" type="button" name="button">View Map</button>
+
+                </div>
 
               </div>
 
