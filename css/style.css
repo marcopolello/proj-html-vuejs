@@ -138,6 +138,7 @@ nav{
 /* sezione thecompany/sfondo uomo in affari */
 #thecompany{
   min-height: 500px;
+  background-color: #191928;
 }
 /* img pallini */
 .bullets{
@@ -154,7 +155,6 @@ nav{
   height: auto;
 }
 #background_companysx{
-  background-color: #191928;
   height: 674px;
 }
 .companysx{
